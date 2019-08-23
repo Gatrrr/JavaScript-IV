@@ -48,13 +48,13 @@ class ProjectManager extends Instructor{
         super(ProjectManagerProps);
         this.newGradClassName = ProjectManagerProps.GradClassName
         this.newFavInstructor = ProjectManagerProps.FavInstructor
-        this.newchannel = ProjectManagerProps.channel
+        this.newChannel = ProjectManagerProps.channel
     }
     standUp(channel){
-        return `${Ronny.newName} announces to ${channel} @channel standy times`
+        return `${this.newName} announces to ${channel} @channel standy times`
     }
     debugsCode(student, subject){
-        return `${Ronny.newName} debugs ${student.newName}'s code on ${subject}`
+        return `${this.newName} debugs ${student.newName}'s code on ${subject}`
     }
 }
 
@@ -107,4 +107,5 @@ console.log(fred.demo(fred.newSubject));
 console.log(fred.grade(student, fred.newSubject));
 console.log(student.listSubjects());
 console.log(student.PRAssignment(fred.newSubject));
-console.log(Ronny.debugsCode())
+console.log(Ronny.standUp(Ronny.newChannel));
+console.log(Ronny.debugsCode(student, Ronny.newSubject));
